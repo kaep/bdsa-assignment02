@@ -39,7 +39,26 @@ namespace assignment02
 
         private Status calculateStatus()
         {
-            throw new NotImplementedException(); 
+            var now = DateTime.Now; 
+            if(now < StartDate) 
+            {
+                return Status.New; 
+            }
+            else if(now > GraduationDate && GraduationDate == EndDate) 
+            {
+                return Status.Graduated; 
+            }
+            else if(now > EndDate && GraduationDate > EndDate) 
+            {
+                return Status.Dropout;
+            }
+            else if(now < EndDate && now < GraduationDate)
+            {
+                return Status.Active;
+            }
+            else {
+                return Status.Active; //det her er meget forkert, skal ha' polish
+            }
         }
 
     }
