@@ -4,22 +4,16 @@ namespace assignment02
 {
     public class Student
     {
-        public int Id 
-        {
-            get { return Id; }
-            set { Id = value; }
-        } 
+        public int Id  {get; init;} 
 
         public string GivenName
         {
-            get {return GivenName; }
-            set {GivenName = value; }
+            get; set; 
         } 
 
         public string Surname 
         {
-            get {return Surname; }
-            set {Surname = value; }
+            get; set; 
         }
 
         public Status Status 
@@ -29,20 +23,17 @@ namespace assignment02
 
         public DateTime StartDate 
         {
-            get {return StartDate; }
-            set {StartDate = value}
+            get; set; 
         }
 
         public DateTime EndDate 
         {
-            get {return EndDate; }
-            set {EndDate = value}
+            get; set; 
         }
 
         public DateTime GraduationDate 
         {
-            get {return GraduationDate; }
-            set {GraduationDate = value}
+            get; set; 
         }
 
     }
