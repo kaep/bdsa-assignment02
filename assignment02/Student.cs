@@ -23,5 +23,27 @@ namespace assignment02
         }
 
         public Status Status 
+        {
+            get {return Status; } //correct logic coming 
+        }
+
+        public DateTime StartDate 
+        {
+            get {return StartDate; }
+            set {StartDate = value}
+        }
+
+        public DateTime EndDate 
+        {
+            get {return EndDate; }
+            set {EndDate = value}
+        }
+
+        public DateTime GraduationDate 
+        {
+            get {return GraduationDate; }
+            set {GraduationDate = value}
+        }
+
     }
 }
