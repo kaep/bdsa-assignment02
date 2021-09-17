@@ -18,7 +18,7 @@ namespace assignment02
 
         public Status Status 
         {
-            get {return Status; } //correct logic coming 
+            get {return calculateStatus(); } //correct logic coming 
         }
 
         public DateTime StartDate 
@@ -34,6 +34,12 @@ namespace assignment02
         public DateTime GraduationDate 
         {
             get; set; 
+        }
+
+
+        private Status calculateStatus()
+        {
+            throw new NotImplementedException(); 
         }
 
     }

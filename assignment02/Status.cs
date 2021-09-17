@@ -7,6 +7,6 @@ namespace assignment02
        New, 
        Active, 
        Dropout, 
-       Graduate 
+       Graduated 
     }
 }
