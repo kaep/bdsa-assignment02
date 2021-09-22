@@ -26,5 +26,22 @@ namespace assignment02.Tests
             Assert.Equal(expectedStatus, actualStatus); 
 
         }
+
+        [Fact]
+        public void toString_returns_correctly_formatted_string() 
+        {
+            var student = new Student() 
+            {
+                GivenName = "Lars-Boerge", 
+                Surname = "Erdogan", 
+                Id = 1234, 
+                StartDate = new DateTime(2019, 1, 1),
+                EndDate = new DateTime(2022, 1, 1),
+                GraduationDate = new DateTime(2022, 1 , 1)
+            };
+
+            var expectedString = "Student: 1234 Status: Active Name: Lars-Boerge Erdogan"; 
+            Assert.Equal(expectedString, student.ToString());
+        }
     }
 }

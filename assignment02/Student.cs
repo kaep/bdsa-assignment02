@@ -18,7 +18,7 @@ namespace assignment02
 
         public Status Status 
         {
-            get {return calculateStatus(); } //correct logic coming 
+            get {return calculateStatus(); } 
         }
 
         public DateTime StartDate 
@@ -56,9 +56,9 @@ namespace assignment02
             {
                 return Status.Dropout;
             }
-
-
         }
+
+        public override string ToString() => $"Student: {Id} Status: {Status} Name: {GivenName} {Surname}";
 
     }
 }
