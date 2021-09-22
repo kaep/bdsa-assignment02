@@ -65,7 +65,7 @@ namespace assignment02.Tests
                 EndDate = new DateTime(2022, 1, 1),
                 GraduationDate = new DateTime(2022, 1 , 1)
             };
-            var expected = "ImmutableStudent { Id = 1239, GivenName = Lars-Boerge, Surname = Erdogan, Status = Active, StartDate = 01-01-2019 00:00:00, EndDate = 01-01-2022 00:00:00, GraduationDate = 01-01-2022 00:00:00 }";
+            var expected = $"ImmutableStudent {{ Id = 1239, GivenName = Lars-Boerge, Surname = Erdogan, Status = Active, StartDate = {student.StartDate.ToString()}, EndDate = {student.EndDate.ToString()}, GraduationDate = {student.GraduationDate.ToString()} }}";
             Assert.Equal(expected, student.ToString());
         }
     }
