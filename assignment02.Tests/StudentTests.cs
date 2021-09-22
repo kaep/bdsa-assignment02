@@ -29,6 +29,8 @@ namespace assignment02.Tests
 
         [Fact]
         public void ToString_returns_correctly_formatted_string() 
+
+        public void ToString_returns_correctly_formatted_string() 
         {
             var student = new Student() 
             {
