@@ -40,25 +40,24 @@ namespace assignment02
         private Status calculateStatus()
         {
             var now = DateTime.Now; 
-            if(now < StartDate) 
+            if(now < StartDate)
             {
                 return Status.New; 
             }
-            else if(now > GraduationDate && GraduationDate == EndDate) 
-            {
-                return Status.Graduated; 
-            }
-            else if(now > EndDate && GraduationDate > EndDate) 
-            {
-                return Status.Dropout;
-            }
-            else if(now < EndDate && now < GraduationDate)
+            else if (now < GraduationDate)
             {
                 return Status.Active;
             }
-            else {
-                return Status.Active; //det her er meget forkert, skal ha' polish
+            else if (now >= EndDate && EndDate == GraduationDate)
+            {
+                return Status.Graduated; 
             }
+            else 
+            {
+                return Status.Dropout;
+            }
+
+
         }
 
     }
